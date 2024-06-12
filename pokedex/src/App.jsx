@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
+import NavBar from './components/NavBar';
 import './App.css'
 import PokemonCard from './components/PokemonCard'
 
@@ -42,14 +43,20 @@ function App() {
 
   return (
     <>
+      <NavBar
+          onPreviousClick={handlePreviousClick}
+          onNextClick={handleNextClick}
+          showPrevious={true}
+          showNext={true}    
+      />
       <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-      <div>
+      {/* <div>
         <button onClick={handlePreviousClick} >Précedent</button>
         <buton onClick={handleNextClick}>Suivant</buton>
-      </div>
+      </div> */}
       
     </>
   )
 }
 
-export default App
+export default App;
