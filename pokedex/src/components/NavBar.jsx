@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 
 function NavBar ({pokemonList,onPokemonClick}) {
     //   {onPreviousClick, onNextClick,showPrevious,showNext}
-    
+    // const handlePokemonClick = (index) => {
+    //     const selectedPokemon = pokemonList[index];
+       
+    //     onPokemonClick(index);
+    //   };
     return (
         <header>
             <nav>    
-                {pokemonList.map((pokemon,index) => (
+                {pokemonList.map((pokemon,index) => (              
                     <button key={index} onClick={() =>onPokemonClick(index)}>
+                           
                     {pokemon.name}
                     </button>
                 ))}
