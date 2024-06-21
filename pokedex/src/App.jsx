@@ -32,15 +32,14 @@ const pokemonList = [
   ];
 
   function App() {
-    const [pokemonIndex, setPokemonIndex] = useState(0);
-    
-   
-    const handlePokemonClick = (index) => {  
-      pokemonList.name ==="pikachu" ? console.log("pika") : setPokemonIndex(index); 
-    }
     useEffect(() => 
         {alert("hello pokemon trainer :)")},[],
     );
+    const [pokemonIndex, setPokemonIndex] = useState(0);
+    
+    const handlePokemonClick = (index) => {  
+      pokemonList.name ==="pikachu" ? console.log("pika") : setPokemonIndex(index); 
+    }
   // const [pokemonIndex,setPokemonIndex] = useState(0);
 
   // const handlePreviousClick = () => {

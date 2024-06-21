@@ -2,6 +2,17 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 function NavBar ({pokemonList,onPokemonClick}) {
+    
+    const handlePokemonClick = (index) => {
+        const selectedPokemon = pokemonList[index];
+        if (selectedPokemon.name.toLowerCase() === 'pikachu') {
+          alert('pika pikachu !!!');
+         } 
+        // else {  alert(`Vous avez sélectionné : ${selectedPokemon.name}`);
+        // }
+        onPokemonClick(index);
+      };
+     
     //   {onPreviousClick, onNextClick,showPrevious,showNext}
     // const handlePokemonClick = (index) => {
     //     const selectedPokemon = pokemonList[index];
@@ -12,8 +23,8 @@ function NavBar ({pokemonList,onPokemonClick}) {
         <header>
             <nav>    
                 {pokemonList.map((pokemon,index) => (              
-                    <button key={index} onClick={() =>onPokemonClick(index)}>
-                           
+                    <button key={index} onClick={() =>handlePokemonClick(index)}>
+                    
                     {pokemon.name}
                     </button>
                 ))}
