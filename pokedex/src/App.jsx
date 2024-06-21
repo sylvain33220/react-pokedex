@@ -38,7 +38,7 @@ const pokemonList = [
     const [pokemonIndex, setPokemonIndex] = useState(0);
     
     const handlePokemonClick = (index) => {  
-      pokemonList.name ==="pikachu" ? console.log("pika") : setPokemonIndex(index); 
+      pokemonList.name ==="pikachu" ? alert("pika") : setPokemonIndex(index); 
     }
   // const [pokemonIndex,setPokemonIndex] = useState(0);
 
@@ -51,12 +51,8 @@ const pokemonList = [
 
   return (
     <>
-      {/* <NavBar
-          onPreviousClick={handlePreviousClick}
-          onNextClick={handleNextClick}
-          showPrevious={true}
-          showNext={true}    
-      /> */}
+      
+      
       <NavBar pokemonList={pokemonList}
               onPokemonClick={handlePokemonClick}
       />
